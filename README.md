@@ -1,4 +1,4 @@
-# 🛍️ Ecommerce_API
+# 🛍️ Ecommerce Backend System
 
 A **FastAPI-based backend** for a modern e-commerce platform with secure authentication, encryption, and database integration.
 
