@@ -20,4 +20,4 @@ COPY . .
 RUN chmod +x wait-for-db.sh
 
 # Default command to start the app (wait for db then start FastAPI)
-CMD ["./wait-for-db.sh", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+CMD ["./wait-for-db.sh", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "10000"]
