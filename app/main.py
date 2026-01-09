@@ -1,10 +1,6 @@
 from fastapi import FastAPI
 from fastapi.openapi.utils import get_openapi
-from app.database import Base, engine
 from routers import users, products, orders, order_items
-
-# ------------------- Create DB Tables -------------------
-Base.metadata.create_all(bind=engine)
 
 # ------------------- Initialize FastAPI App -------------------
 app = FastAPI(
@@ -36,7 +32,6 @@ def custom_openapi():
         routes=app.routes,
     )
 
-    # Add JWT Bearer Token Support
     openapi_schema["components"]["securitySchemes"] = {
         "BearerAuth": {
             "type": "http",
@@ -45,13 +40,15 @@ def custom_openapi():
         }
     }
 
-    # Apply BearerAuth to all endpoints except login & register
     for path in openapi_schema["paths"]:
         if path not in ["/auth/token", "/users/register"]:
             for method in openapi_schema["paths"][path]:
-                openapi_schema["paths"][path][method]["security"] = [{"BearerAuth": []}]
+                openapi_schema["paths"][path][method]["security"] = [
+                    {"BearerAuth": []}
+                ]
 
     app.openapi_schema = openapi_schema
     return app.openapi_schema
 
 app.openapi = custom_openapi
+
