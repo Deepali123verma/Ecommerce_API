@@ -17,6 +17,7 @@ app.include_router(order_items.router)
 
 # ------------------- Root Endpoint -------------------
 @app.get("/")
+@app.head("/")
 def root():
     return {"message": "Welcome to the E-Commerce API!"}
 
