@@ -1,38 +1,68 @@
-# 🛍️ Ecommerce Backend System
+# 🛍️ E-Commerce Backend System
 
-A **FastAPI-based backend** for a modern e-commerce platform with secure authentication, encryption, and database integration.
-
----
+A secure and scalable e-commerce backend built using FastAPI and PostgreSQL. The project provides RESTful APIs for user management, product management, and order processing, with a strong focus on authentication, security, and maintainable backend architecture.
 
 ## 🚀 Features
 
-- 🔐 **User Authentication:** JWT-based login system with secure password hashing using `bcrypt`.
-- 🧠 **Data Encryption:** Sensitive data protected with Fernet symmetric encryption.
-- 🛒 **CRUD Operations:** APIs for managing users, products, orders, and order items.
-- 🗄️ **Database Integration:** PostgreSQL database powered by SQLAlchemy ORM.
-- 📘 **API Documentation:** Auto-generated Swagger UI (`/docs`) and ReDoc (`/redoc`).
-- 🧩 **Modular Code Structure:** Well-organized architecture for scalability and clarity.
-
----
+* JWT-based Authentication and Authorization
+* Role-Based Access Control (RBAC)
+* Secure Password Hashing using bcrypt
+* Data Encryption using Fernet
+* CRUD Operations for Users, Products, Orders, and Order Items
+* PostgreSQL Integration with SQLAlchemy ORM
+* Interactive API Documentation with Swagger UI and ReDoc
+* Docker-based Containerization
 
 ## 🛠️ Tech Stack
 
-| Component | Technology Used |
-|------------|-----------------|
-| **Backend Framework** | FastAPI |
-| **Language** | Python 3.13 |
-| **Database** | PostgreSQL |
-| **ORM** | SQLAlchemy |
-| **Authentication** | JWT (via python-jose) |
-| **Password Hashing** | Passlib (bcrypt) |
-| **Encryption** | Cryptography (Fernet) |
-| **Server** | Uvicorn |
+* Python
+* FastAPI
+* PostgreSQL
+* SQLAlchemy
+* JWT Authentication
+* bcrypt
+* Docker
+* Uvicorn
 
----
+## ⚙️ Getting Started
 
-## ⚙️ Setup Instructions
+### Clone the Repository
 
-### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/Ecommerce_API.git
+git clone https://github.com/Deepali123verma/Ecommerce_API.git
 cd Ecommerce_API
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run the Application
+
+```bash
+uvicorn app.main:app --reload
+```
+
+## 📖 API Documentation
+
+After running the application:
+
+* Swagger UI: http://localhost:8000/docs
+* ReDoc: http://localhost:8000/redoc
+
+## 🎯 Learning Outcomes
+
+* Building RESTful APIs with FastAPI
+* Implementing JWT Authentication and RBAC
+* Managing relational databases using PostgreSQL and SQLAlchemy
+* Securing applications with hashing and encryption
+* Containerizing backend applications using Docker
+
+## 👩‍💻 Author
+
+**Deepali Verma**
+
+GitHub: https://github.com/Deepali123verma
+
